@@ -59,6 +59,11 @@ body{
     cursor: pointer;
 }
 
+.form form .field i.active::before{
+	color: #333;
+	content: "\f070";
+
+
 .form form .name-details{
     display: flex;
 }
@@ -188,6 +193,14 @@ form .name-details .field:last-child{
     font-size: 16px;
     border-radius: 5px 0 0 5px;
     outline: none;
+    pointer-events: none;
+    opacity 0;
+    transition: all 0.3s ease;
+}
+
+.users .search input.active{
+	opacity: 1;
+	pointer-events: auto;
 }
 
 .users-list{
