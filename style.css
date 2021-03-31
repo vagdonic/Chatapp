@@ -49,6 +49,7 @@ body{
     border-radius: 5px;
     margin-bottom: 10px;
     border: 1px solid #f5c6cb;
+    display: none;
 }
 
 .form form .field i{
@@ -57,6 +58,11 @@ body{
     top: 70%;
     transform: translateY(-95%);
     cursor: pointer;
+}
+
+.form form .field i.active::before{
+    content: "\f070";
+    color: #333;
 }
 
 .form form .name-details{
@@ -137,6 +143,11 @@ form .name-details .field:last-child{
     width: 50px;
 }
 
+.users header .details span{
+    font-size: 18px;
+    font-weight: 500;
+}
+
 .wrapper img{
     object-fit: cover;
     border-radius: 50%;
@@ -178,9 +189,8 @@ form .name-details .field:last-child{
     font-size: 18px;
 }
 
-
 .users .search input{
-    position: relative;
+    position: absolute;
     height: 42px;
     width: calc(100% - 50px);
     border: 1px solid #ccc;
@@ -188,7 +198,14 @@ form .name-details .field:last-child{
     font-size: 16px;
     border-radius: 5px 0 0 5px;
     outline: none;
-    
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+
+.users .search input.active{
+    opacity: 1;
+    pointer-events: auto;
 }
 
 .users-list{
@@ -204,12 +221,21 @@ form .name-details .field:last-child{
     width: 47px;
     height: 42px;
     border: none;
-    color: #fff;
-    background: #333;
+    color: #333;
+    background: #fff;
     cursor: pointer;
     font-size: 17px;
     border-radius: 0 5px 5px 0;
     outline: none;
+}
+
+.users .search button.active{
+    color: #fff;
+    background: #333;
+}
+
+.users .search button.active i::before{
+    content: "\f00d";
 }
 
 .users-list a .status-dot{
