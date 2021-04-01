@@ -1,4 +1,4 @@
-const form = document.querySelector(".signup form"),
+const form = document.querySelector(".login form"),
 continueBtn = form.querySelector(".button input"),
 errorText = form.querySelector(".error-text");
 
@@ -9,13 +9,13 @@ form.onsubmit = (e) => {
 continueBtn.onclick = () => {
     //ajax start
     let xhr = new XMLHttpRequest(); //xml object creation.
-    xhr.open("POST", "php/signup.php", true);
+    xhr.open("POST", "php/login.php", true);
     xhr.onload = () => {
         if(xhr.readyState === XMLHttpRequest.DONE){
             if(xhr.status === 200){
                 let data = xhr.response;
                 if(data == "success"){
-                    location.href = "login.php"
+                    location.href = "users.php";
                 }else{
                     errorText.textContent = data;
                     errorText.style.display =  "block";

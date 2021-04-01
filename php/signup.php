@@ -1,5 +1,5 @@
 <?php
-
+    session_start();
     include_once "config.php";
 
     $fname = mysqli_real_escape_string($conn, $_POST['fname']);
@@ -55,9 +55,6 @@
                         else{
                             echo "Something went wrong!";
                         }
-                        }
-                        else{
-                            echo "image else";
                         }
                     }else{
                         echo "Please select an image file - png, jpeg, jpg!";

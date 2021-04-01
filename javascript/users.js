@@ -6,3 +6,7 @@ searchBtn.onclick = () => {
     searchBar.focus();
     searchBtn.classList.toggle("active");
 }
+
+setInterval = (() => {
+
+}, 500); // this func will constantly run after 500ms.
