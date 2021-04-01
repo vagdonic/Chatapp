@@ -2,7 +2,7 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
-        <meta name="viewport" content="width-device-width, initial-scale=1.0">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=egde">
 
         <title>Chat App</title>
@@ -15,26 +15,26 @@
         <div class="wrapper">
             <section class="form signup">
                 <header>Chat App</header>
-                <form action="#">
-                    <div class="error-text">This is an error message!</div>
+                <form action="#" enctype="multipart/formdata">
+                    <div class="error-text"></div>
                     <div class="name-details">
                         <div class="field input">
-                            <input type="text" placeholder="First Name">
+                            <input type="text" name="fname" placeholder="First Name" required>
                         </div>
                         <div class="field input">
-                            <input type="text" placeholder="Last Name">
+                            <input type="text" name="lname" placeholder="Last Name" required>
                         </div>
                     </div>
                         <div class="field input">
-                            <input type="text" placeholder="Email">
+                            <input type="text" name="email" placeholder="Email" required>
                         </div>
                         <div class="field input">
-                            <input type="password" placeholder="Password">
+                            <input type="password" name="password" placeholder="Password" required>
                             <i class="fas fa-eye"></i>
                         </div>
                         <div class="field image">
                             <label>Select image</label>
-                            <input type="file">
+                            <input type="file" name="image" required>
                         </div>
                         <div class="field button">
                             <input type="submit" value="Sign Up">
@@ -44,5 +44,6 @@
             </section>
         </div>
         <script src="javascript/pass-show-hide.js"></script>
+        <script src="javascript/signup.js"></script>
     </body>
 </html>
