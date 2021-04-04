@@ -243,6 +243,10 @@ form .name-details .field:last-child{
     color: #468669;
 }
 
+.users-list a .status-dot.offline{
+    color: #ccc;
+}
+
 .users-list a .content img{
     height: 40px;
     width: 40px;

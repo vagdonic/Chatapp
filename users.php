@@ -6,7 +6,6 @@
 
 ?>
 
-
 <?php include_once "header.php"; ?>
     <body>
         <div class="wrapper">
@@ -28,7 +27,7 @@
                             <p><?php echo $row['status']?></p>
                         </div>
                     </div>
-                    <a href="#" class="logout">Logout</a>
+                    <a href="php/logout.php?logout_id=<?php echo $row['unique_id']; ?>" class="logout">Logout</a>
                 </header>
                 <div class="search">
                     <span class="text">Select a user to chat</span>
@@ -36,56 +35,7 @@
                     <button><i class="fas fa-search"></i></button>
                 </div>
                 <div class="users-list">
-                    <a href="#">
-                        <div class="content">
-                            <img src="manav.jpeg" alt="">
-                            <div class="details">
-                                <span>Manav Vagdoda</span>
-                                <p>Hello Tuesday :)</p>
-                            </div>
-                        </div>
-                        <div class="status-dot"><i class="fas fa-circle"></i></div>
-                    </a>
-                    <a href="#">
-                        <div class="content">
-                            <img src="manav.jpeg" alt="">
-                            <div class="details">
-                                <span>Manav Vagdoda</span>
-                                <p>Hello Tuesday :)</p>
-                            </div>
-                        </div>
-                        <div class="status-dot"><i class="fas fa-circle"></i></div>
-                    </a>
-                    <a href="#">
-                        <div class="content">
-                            <img src="manav.jpeg" alt="">
-                            <div class="details">
-                                <span>Manav Vagdoda</span>
-                                <p>Hello Tuesday :)</p>
-                            </div>
-                        </div>
-                        <div class="status-dot"><i class="fas fa-circle"></i></div>
-                    </a>
-                    <a href="#">
-                        <div class="content">
-                            <img src="manav.jpeg" alt="">
-                            <div class="details">
-                                <span>Manav Vagdoda</span>
-                                <p>Hello Tuesday :)</p>
-                            </div>
-                        </div>
-                        <div class="status-dot"><i class="fas fa-circle"></i></div>
-                    </a>
-                    <a href="#">
-                        <div class="content">
-                            <img src="manav.jpeg" alt="">
-                            <div class="details">
-                                <span>Manav Vagdoda</span>
-                                <p>Hello Tuesday :)</p>
-                            </div>
-                        </div>
-                        <div class="status-dot"><i class="fas fa-circle"></i></div>
-                    </a>
+        
                 </div>
             </section>
         </div>
